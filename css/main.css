@@ -9,7 +9,7 @@
   float: right;
   padding: 6px;
   border: none;
-  margin-top: 12px;
+  margin-top: 16px;
   margin-right: 16px;
   font-size: 17px;
 }
@@ -41,7 +41,7 @@
 .footer {
   background-color: rgb(0, 0, 0);
   overflow: hidden;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -79,6 +79,7 @@
 .content {
   padding: 14px;
   font-size: 22px;
+  min-height: 100vh;
 }
 
 * {box-sizing:border-box}
@@ -88,6 +89,7 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
+  min-height: 100vh;
 }
 
 /* Hide the images by default */
@@ -99,11 +101,12 @@
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 75%;
   width: auto;
-  margin-top: -22px;
+  margin-top: 22px;
   padding: 16px;
-  color: black;
+  background-color: #717171;
+  color: rgb(254, 254, 254);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -111,9 +114,15 @@
   user-select: none;
 }
 
+/* Position the "prev button" to the left */
+.prev {
+  left: 22px;
+  border-radius: 3px 0 0 3px;
+}
+
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: 22px;
   border-radius: 3px 0 0 3px;
 }
 
